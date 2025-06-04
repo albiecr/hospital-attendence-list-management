@@ -1,0 +1,10 @@
+# Eclipse
+.settings/
+bin/
+.classpath
+.project
+
+# Outros arquivos temporários
+*.class
+*.log
+*.tmp
