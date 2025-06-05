@@ -68,6 +68,7 @@ src/
     2. Call next patient
     3. Show lists
     4. Exit
+  
 <h2>📄 License </h2>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
