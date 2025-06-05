@@ -38,20 +38,36 @@ cd hospital-attendence-list-management</code></pre>
 &nbsp&nbsp&nbsp 4. Exit the program <br>
 
 <h2>🏗️ Code Structure</h2>
-The TextAnalyzer class contains: <br><br>
-<code> HospitalList.java </code>: Main management class handling patient queues <br>
-• Maintains two ArrayLists for preferred and normal patients <br>
-• Provides methods to add, call, and display patients <br> <br>
+<pre><code class="language-java">
+src/
+└── management/
+├── patient.java                // Patient entity class
+├── typeAttendence.java         // Enum for appointment types
+├── HospitalList.java           // Core list management logic
+└── Main.java                   // CLI interface and program entry point </code></pre>
 
-<code> patient.java </code>: Patient entity class <br>
-• Stores patient name and attendence type <br>
+#### Class Responsibilities
 
-<code> typeAttendence.java </code>: Enum defining attendence types <br>
-• NORMAL and PREFERENTIAL values <br>
+| Class             | Responsibility |
+|-------------------|----------------|
+| **patient**       | Stores patient data (name + appointment type) |
+| **typeAttendence** | Defines enum values (REGULAR, PRIORITY) |
+| **HospitalList**  | Manages two priority queues and core operations |
+| **Main**         | Handles user interaction and menu system |
 
-<code> Main.java </code>: User interface class <br>
-• Handles user input/output <br>
+#### Key Methods
 
+- **HospitalList**
+  - `addPatient(Patient)` → Adds to correct queue
+  - `callNext()` → Retrieves next patient (priority first)
+  - `showLists()` → Displays current queue status
+
+- **Main**
+  - Interactive menu with 4 options:
+    1. Add patient
+    2. Call next patient
+    3. Show lists
+    4. Exit
 <h2>📄 License </h2>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
